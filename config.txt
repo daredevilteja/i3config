@@ -1,0 +1,13 @@
+# Lock the screen
+bindsym $mod+Shift+x exec i3lock
+
+# touchpad controls
+exec xinput set-prop "ELAN0515:01 04F3:3142 Touchpad" "libinput Tapping Enabled" 1
+exec xinput set-prop "ELAN0515:01 04F3:3142 Touchpad" "libinput Natural Scrolling Enabled" 1
+
+# brightness controls
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=6005 -q s 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q s 5%+
+
+# custom shortcuts for frequently used applications
+bindsym $mod+Shift+n exec nautilus
